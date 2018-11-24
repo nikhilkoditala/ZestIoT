@@ -1,0 +1,13 @@
+
+//the following code should be run on console of spicejet website to extract json details.
+
+allFlights = [];
+$('.altRowItem.fare-row').each(function(){
+let fno = $(this).find('.activateJourney_0_0_0_0').text();
+let from = $(this).find('.departure-time').text();
+let to = $(this).find('.arrival-time').text();
+let fare = $(this).find('.fareCol1').text();
+let flight = {fno:fno,from:from,to:to,fare:fare};
+allFlights.push(flight);
+});
+console.log(JSON.stringify(allFlights));

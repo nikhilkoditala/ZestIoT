@@ -1,0 +1,14 @@
+
+//the following code should be run on console of goindigo website to extract json details.
+
+allflights = [];
+$('.trips-body').children().each(function(){
+let fno = $(this).find('.flightNo').text();
+let duration = $(this).find('.duration').text();
+let time  = $(this).find('.time').text();
+let fare = $(this).find('.price').text();
+let flight = {fno:fno,duration:duration,time:time,fare:fare}
+allflights.push(flight);
+//console.log(flight);
+});
+console.log(JSON.stringify(allflights));

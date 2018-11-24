@@ -1,0 +1,22 @@
+<div class="container mt-5 mb-5">
+    <table class="table table-striped rounded bg-white shadow p-3 mb-3">
+        <thead>
+            <tr>
+                <th scope="col">Flight No</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Time</th>
+                <th scope="col">Fare</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each entries}}
+            <tr>
+                <td>{{fno}}</th>
+                <td>{{duration}}</td>
+                <td>{{time}}</td>
+                <td>{{fare}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

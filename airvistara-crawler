@@ -1,0 +1,13 @@
+
+//the following code should be run on console of airvistara website to extract json details.
+
+allFlights = [];
+$('.bound-table-flightline').each(function(){
+let fno = $(this).find('.aircraftnumber').text();
+let from = $(this).find('.time-from').text();
+let to = $(this).find('.time-to').text();
+let fare = $(this).find('.cell-reco-bestprice-integer').text();
+let flight = {fno:fno,from:from,to:to,fare:fare};
+allFlights.push(flight);
+});
+console.log(JSON.stringify(allFlights));
